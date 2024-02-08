@@ -23,12 +23,31 @@
    </style>
 </head>
 <body>
-<h1>Título de prueba</h1>
+<h1>PDF de la tabla de juegos</h1>
 <hr>
 <div class="contenido">
-   <p id="primero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
-   <p id="segundo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
-   <p id="tercero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
+<table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre Juego</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+@foreach($todosloscampos as $juego)
+                <tr>
+                    <th scope="row">{{ $juego->id }}</th>
+                    <td>{{ $juego->titulojuego }}</td>
+                    <td>{{ $juego->plataforma }}</td>
+                    <td>{{ $juego->genero }}</td>
+                    <td>{{ $juego->descripcion }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
