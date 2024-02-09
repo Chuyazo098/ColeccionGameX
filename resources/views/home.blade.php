@@ -1,6 +1,55 @@
 @extends('layouts.app')
 @section('content')  
 
+
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="{{ asset('imagenes/Fornite.jpeg') }}" alt="Descripción de la imagen" class="img-fluid" style="width: 1350px; height: 700px; object-fit: cover;">
+<div class="container">
+<div class="carousel-caption text-start">
+<h1>Empieza a registrar tus logros!!!!.</h1>
+<p class="opacity-75">Se necesita una cuenta para registrar logros de tus juegos.</p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<img src="{{ asset('imagenes/Halo.jpeg') }}" alt="Descripción de la imagen" class="img-fluid" style="width: 1350px; height: 700px; object-fit: cover;">
+<div class="container">
+<div class="carousel-caption">
+<h1>Comenta sobre algun logro que tengas.</h1>
+<p>Esto ayudara a que veas los juegos de diferente forma.</p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<img src="{{ asset('imagenes/mario.jpg') }}" alt="Descripción de la imagen" class="img-fluid" style="width: 1350px; height: 700px; object-fit: cover;">
+<div class="container">
+<div class="carousel-caption text-end">
+<h1>Explora todos los juegos registrados disponibles.</h1>
+<p>Estas listo para vivir una nueva aventura.</p>
+</div>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,52 +64,21 @@
                     @endif
                     <br>
 
-                    <a class="navbar-brand" id="cambiarVista_consoles" href="{{ url('/juegos') }}">Tabla de Juegos</a>
+                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/juegos') }}'">Tabla de Juegos</button>
+                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createJuego') }}'">Nuevo Juego</button>
                     <br>
-                    <a class="navbar-brand" id="cambiarVista_games" href="{{ url('/progresos') }}">Tabla de Progreso</a>
+                    
+                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/progresos') }}'">Tabla de Progreso</button>
+                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createProgreso') }}'">Nuevo progreso</button>
                     <br>
-                    <a class="navbar-brand" id="cambiarVista_metadata" href="{{ url('/colecciones') }}">Tabla de Colecciones</a>
-                    <br>
+                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/colecciones') }}'">Tabla de Colecciones</button>
+                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createColeccion') }}'">Nueva Colección</button>
 
-                    <a class="navbar-brand" id="cambiarVista_consoles" href="{{ route('createJuego') }}">Nuevo Juego</a>
-                    <br>
-                    <a class="navbar-brand" id="cambiarVista_games" href="{{ route('createProgreso') }}">Nuevo progreso</a>
-                    <br>
-                    <a class="navbar-brand" id="cambiarVista_metadata" href="{{ route('createColeccion') }}">Nueva Coleccion</a>
-                    <br>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- 
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{ asset('imagenes/descargar (1).jpeg') }}" class="d-block w-100" alt="imagen 1">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('imagenes/descargar.jpeg') }}" class="d-block w-100" alt="igamen 2">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('imagenes/images.jpeg') }}" class="d-block w-100" alt="imagen">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
-
 
 @endsection
 
