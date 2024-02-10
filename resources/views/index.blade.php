@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="{{ asset('asset/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/slick/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/tooplate-style.css') }}">
-    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");</script>  
+    <script>
+        document.documentElement.className="js";
+        var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};
+        supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
+    </script>  
 </head>
 
 <body>
@@ -33,8 +37,9 @@
                                             <div class="product">
                                                 <div class="tm-nav-link">
                                                     <i class="fas fa-home fa-3x tm-nav-icon"></i>
-                                                    <button onclick="window.location.href='{{ url('/home') }}'" class="tm-nav-text btn-link">Home</button>
-                                                    <div class="product__bg"></div>        
+                                                    <form action="{{ url('/home') }}" method="GET">
+                                                        <button type="submit" class="tm-nav-text btn-link" style="background-color: transparent; border: none; cursor: pointer;">Home</button>
+                                                    </form>       
                                                 </div>
                                             </div>
                                         </div>
@@ -43,8 +48,9 @@
                                             <div class="product">
                                                 <div class="tm-nav-link">
                                                     <i class="fas fa-sign-in-alt fa-3x tm-nav-icon"></i>
-                                                    <button onclick="window.location.href='{{ route('login') }}'" class="tm-nav-text btn-link">Log in</button>
-                                                    <div class="product__bg"></div>             
+                                                    <form action="{{ route('login') }}" method="GET">
+                                                        <button type="submit" class="tm-nav-text btn-link" style="background-color: transparent; border: none; cursor: pointer;">Log in</button>
+                                                    </form>            
                                                 </div>
                                             </div>
                                         </div>
@@ -53,8 +59,9 @@
                                                 <div class="product">
                                                     <div class="tm-nav-link">
                                                         <i class="fas fa-user-plus fa-3x tm-nav-icon"></i>
-                                                        <button onclick="window.location.href='{{ route('register') }}'" class="tm-nav-text btn-link">Register</button>
-                                                        <div class="product__bg"></div>             
+                                                        <form action="{{ route('register') }}" method="GET">
+                                                            <button type="submit" class="tm-nav-text btn-link" style="background-color: transparent; border: none; cursor: pointer;">Register</button>
+                                                        </form>            
                                                     </div>
                                                 </div>
                                             </div>
