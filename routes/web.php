@@ -23,7 +23,7 @@ use App\Http\Controllers\progresoController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
 
