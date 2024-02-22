@@ -54,7 +54,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Area de Registros y Evidencia') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -63,16 +63,19 @@
                         </div>
                     @endif
                     <br>
-
-                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/juegos') }}'">Tabla de Juegos</button>
-                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createJuego') }}'">Nuevo Juego</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="window.location='{{ url('/juegos') }}'">Tabla de Juegos</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="window.location='{{ route('createJuego') }}'">Nuevo Juego</button>
+                    <br>
                     <br>
                     
-                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/progresos') }}'">Tabla de Progreso</button>
-                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createProgreso') }}'">Nuevo progreso</button>
+
+                    <button type="button" class="btn btn-primary btn-lg" onclick="window.location='{{ url('/progresos') }}'">Tabla de Progreso</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="window.location='{{ route('createProgreso') }}'">Nuevo progreso</button>
                     <br>
-                    <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ url('/colecciones') }}'">Tabla de Colecciones</button>
-                    <button type="button" class="btn btn-outline-success" onclick="window.location='{{ route('createColeccion') }}'">Nueva Colección</button>
+                    <br>
+
+                    <button type="button" class="btn btn-primary btn-lg" onclick="window.location='{{ url('/colecciones') }}'">Tabla de Colecciones</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="window.location='{{ route('createColeccion') }}'">Nueva Colección</button>
 
                 </div>
             </div>

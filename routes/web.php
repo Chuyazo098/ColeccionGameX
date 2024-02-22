@@ -79,4 +79,4 @@ Route::get('/delete-coleccion/{colecciones_id}', array(
     'uses' => '\App\Http\Controllers\progresoController@deleteJuego'
  ));
 
- Route::name('print')->get('/imprimir', '\App\Http\Controllers\GeneradorController@imprimir');
+Route::name('print')->get('/imprimir', '\App\Http\Controllers\GeneradorController@imprimir');

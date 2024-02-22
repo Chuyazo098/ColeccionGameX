@@ -74,8 +74,8 @@
                 </div>
             </div>
             <footer>
-                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2018</span> Your Company.
-                Layout: Tooplate</p>
+                <p class="small tm-copyright-text">Trabajo realizado &copy; <span class="tm-current-year">2024</span> Por Jesus Alejandro.
+                Proyecto Laravel, Boostrap.</p>
             </footer>
         </div> <!-- .tm-main-content -->  
     </div>
