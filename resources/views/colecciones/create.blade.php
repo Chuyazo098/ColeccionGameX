@@ -3,6 +3,12 @@
     <div class="container">
         <div class="row">
             <h2>Agregar un nuevo videojuego a la colección</h2>
+            <head>
+             <!-- Otros enlaces -->
+             <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+            </head>
+
+       <a href="{{ route('home') }}" class="btn btn-transparent btn-border-black">Regresar a Home</a>
             <hr>
             <form action="{{ route('colecciones.store') }}" method="post" enctype="multipart/form-data" class="col-lg-7">
                 @csrf

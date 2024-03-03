@@ -2,6 +2,12 @@
 
 @section('content')
     <h1>Tabla de Colecciones registradas.</h1>
+    <head>
+        <!-- Otros enlaces -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        </head>
+
+       <a href="{{ route('home') }}" class="btn btn-transparent btn-border-black">Regresar a Home</a>
     <table class="table">
         <thead>
             <tr>

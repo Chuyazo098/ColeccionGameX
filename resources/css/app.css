@@ -1,0 +1,32 @@
+.button-container {
+    text-align: center;
+}
+
+.custom-btn {
+    background-color: #000; /* Negro */
+    border: none;
+    color: #fff; /* Blanco */
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: transparent;
+    color: #000; /* Negro */
+}
+
+.btn-transparent {
+    background-color: transparent !important;
+}
+
+.btn-border-black {
+    border: 2px solid transparent;
+    color: #000 !important; /* Texto negro */
+    transition: border-color 0.3s ease;
+}
+
+.btn-border-black:hover,
+.btn-border-black:focus {
+    border-color: #000; /* Borde negro */
+}
+
